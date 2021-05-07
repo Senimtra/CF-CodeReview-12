@@ -35,6 +35,42 @@ $connect->close();
 
 <body>
     <?php include_once 'navbar.php' ?>
+
+    <p>
+    <div>f</div>
+    <div>f</div>
+    <div>f</div>
+    <button type="button" onclick="loadDoc()">Get Content</button>
+    <div id="content">fdfdf</div>
+    </p>
+    <div>
+        <script>
+            function loadDoc() {
+                // let xhttp = new XMLHttpRequest();
+                // xhttp.open("GET", 'http://api.serri.codefactory.live/random/', true);
+                // xhttp.send();
+                const xhr = new XMLHttpRequest();
+                xhr.open('GET', 'http://api.serri.codefactory.live/random');
+                xhr.responseType = 'json';
+                xhr.onload = function(e) {
+                    if (this.status == 200) {
+                        // console.log(this.response); // JSON response  
+                        let obj = this.response;
+                        console.log(obj.joke);
+                        // let obj = JSON.stringify(this.response);
+
+                        document.getElementById("content").innerHTML = obj.joke;
+
+
+                        // console.log(this.response);
+                    }
+                };
+                xhr.send();
+
+
+            }
+        </script>
+    </div>
     <div class="container-fluid">
         <div class="row g-5 px-5 mt-2">
             <?= $tbody; ?>

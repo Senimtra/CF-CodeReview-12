@@ -60,7 +60,7 @@ if ($_GET['id']) {
                 </tr>
                 <tr>
                     <input type="hidden" name="id" value="<?php echo $data['id'] ?>" />
-                    <input type="hidden" name="loc_image" value="<?php echo $data['loc_image'] ?>" />
+                    <input type="hidden" name="loc_image" value="<?php echo $image ?>" />
                     <td><button class="btn btn-success" type="submit">Save Changes</button></td>
                     <td><a href="index.php"><button class="btn btn-warning" type="button">Back</button></a></td>
                 </tr>
