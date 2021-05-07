@@ -10,9 +10,10 @@ if ($_GET['id']) {
     $result = $connect->query($sql);
     if ($result->num_rows == 1) {
         $data = $result->fetch_assoc();
+        $id = $data['id'];
         $loc_name = $data['loc_name'];
         $price = $data['price'];
-        $image = $data['image'];
+        $loc_image = $data['loc_image'];
         $longitude = $data['longitude'];
         $latitude = $data['latitude'];
     } else {
@@ -40,7 +41,7 @@ if ($_GET['id']) {
     <div class="container-fluid">
         <div class="row g-5 px-5 mt-2">
             <div class="col-7">
-                <div class="card"><img src="<?php echo $image ?>"></div>
+                <div class="card"><img src="<?php echo $loc_image ?>"></div>
             </div>
             <div class="col-5">
                 <div id="map"></div>
@@ -52,29 +53,28 @@ if ($_GET['id']) {
             </div>
         </div>
         <div class="row g-5 px-5 mt-2">
-            <div><a href='update.php?id={$id}'><button class='btn btn-primary btn-sm' type='button'>Edit</button></a>
+            <div><a href='update.php?id=<?php echo $id ?>'><button class='btn btn-primary btn-sm' type='button'>Edit</button></a><a href='delete.php?id=<?php echo $id ?>'><button class='btn btn-danger btn-sm' type='button'>Delete</button></a><a href="index.php"><button class="btn btn-warning btn-sm" type="button">Back</button></a>
             </div>
-        </div>
-        <script>
-            var map;
+            <script>
+                var map;
 
-            function initMap() {
-                var vienna = {
-                    lat: <?php echo $longitude ?>,
-                    lng: <?php echo $latitude ?>
-                };
-                map = new google.maps.Map(document.getElementById('map'), {
-                    center: vienna,
-                    zoom: 4
-                });
-                var pinpoint = new google.maps.Marker({
-                    position: vienna,
-                    map: map
-                });
-            }
-        </script>
+                function initMap() {
+                    var vienna = {
+                        lat: <?php echo $longitude ?>,
+                        lng: <?php echo $latitude ?>
+                    };
+                    map = new google.maps.Map(document.getElementById('map'), {
+                        center: vienna,
+                        zoom: 4
+                    });
+                    var pinpoint = new google.maps.Marker({
+                        position: vienna,
+                        map: map
+                    });
+                }
+            </script>
 
-        <script src=" https://maps.googleapis.com/maps/api/js?key=AIzaSyBtjaD-saUZQ47PbxigOg25cvuO6_SuX3M&callback=initMap" async defer></script>
+            <script src=" https://maps.googleapis.com/maps/api/js?key=AIzaSyBtjaD-saUZQ47PbxigOg25cvuO6_SuX3M&callback=initMap" async defer></script>
 </body>
 
 </html>

@@ -3,7 +3,7 @@ require_once 'db_connect.php';
 
 if ($_POST) {
     $id = $_POST['id'];
-    $image = $_POST['image'];
+    $loc_image = $_POST['loc_image'];
 
     $sql = "DELETE FROM locations WHERE id = {$id}";
     if ($connect->query($sql) === TRUE) {

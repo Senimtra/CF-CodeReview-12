@@ -32,7 +32,7 @@
                 </tr>
                 <tr>
                     <th>Image</th>
-                    <td><input class='form-control' type="text" name="image" /></td>
+                    <td><input class='form-control' type="text" name="loc_image" /></td>
                 </tr>
                 <tr>
                     <td><button class='btn btn-success' type="submit">Insert Location</button></td>

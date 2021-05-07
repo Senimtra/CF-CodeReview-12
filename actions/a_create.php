@@ -5,7 +5,7 @@ if ($_POST) {
     $name = $_POST['name'];
     $price = $_POST['price'];
 
-    $sql = "INSERT INTO locations (loc_name, price, image) VALUES ('$loc_name', $price, '$->fileName')";
+    $sql = "INSERT INTO locations (loc_name, price, loc_) VALUES ('$loc_name', $price, '$->fileName')";
 
     if ($connect->query($sql) === true) {
         $class = "success";

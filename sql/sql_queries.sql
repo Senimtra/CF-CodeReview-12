@@ -8,10 +8,10 @@ CREATE TABLE `cr12_mounteverest_gregor`.`locations` (
     `descr_long` VARCHAR(255) NOT NULL,
     `longitude` FLOAT(20,17) NOT NULL,
     `latitude` FLOAT(20,17) NOT NULL,
-    `image` VARCHAR(255) NOT NULL
+    `loc_image` VARCHAR(255) NOT NULL
 );
 
-INSERT INTO `locations` (`loc_name`, `longitude`, `latitude`, `image`) VALUES
+INSERT INTO `locations` (`loc_name`, `longitude`, `latitude`, `loc_image`) VALUES
 ('Grand Canyon', 36.41005042304209, -113.6837406325074, 'http://shallow.codes/images_CR12/loc01_grand_canyon.jpg'),
 ('Yosemite', 37.873575066875745, -119.54840070709253, 'http://shallow.codes/images_CR12/loc02_yosemite.jpg'),
 ('Yellowstone', 44.47091626420048, -110.60502608313007, 'http://shallow.codes/images_CR12/loc03_yellowstone.jpg'),

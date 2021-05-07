@@ -8,7 +8,7 @@ if (mysqli_num_rows($result)  > 0) {
         $tbody .= "
         <div class='col-4'>
             <div class='p-4 border card'>
-                <div><img class='img-thumbnail' src='" . $row['image'] . "'></div>
+                <div><img class='img-thumbnail' src='" . $row['loc_image'] . "'></div>
                 <div>$row[loc_name]</div>
                 <div>$row[price]</div>
                 <div><a href='update.php?id=" . $row['id'] . "'><button class='btn btn-primary btn-sm' type='button'>Edit</button></a><a href='delete.php?id=" . $row['id'] . "'><button class='btn btn-danger btn-sm' type='button'>Delete</button></a><a href='details.php?id=" . $row['id'] . "'><button class='btn btn-success btn-sm' type='button'>Details</button></a></div>

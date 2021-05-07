@@ -9,7 +9,7 @@ if ($_GET['id']) {
     if ($result->num_rows == 1) {
         $loc_name = $data['loc_name'];
         $price = $data['price'];
-        $image = $data['image'];
+        $loc_image = $data['loc_image'];
     } else {
         header("location: error.php");
     }
@@ -45,7 +45,7 @@ if ($_GET['id']) {
 <body>
     <?php include_once "navbar.php" ?>
     <fieldset>
-        <legend class='h2 mb-3'>Delete request <img class='img-thumbnail rounded-circle' src='<?php echo $image ?>' alt="<?php echo $name ?>"></legend>
+        <legend class='h2 mb-3'>Delete request <img class='img-thumbnail rounded-circle' src='<?php echo $loc_image ?>' alt="<?php echo $loc_name ?>"></legend>
         <h5>You have selected the data below:</h5>
         <table class="table w-75 mt-3">
             <tr>
@@ -56,7 +56,7 @@ if ($_GET['id']) {
         <h3 class="mb-4">Do you really want to delete this location?</h3>
         <form action="actions/a_delete.php" method="post">
             <input type="hidden" name="id" value="<?php echo $id ?>" />
-            <input type="hidden" name="image" value="<?php echo $image ?>" />
+            <input type="hidden" name="loc_image" value="<?php echo $loc_image ?>" />
             <button class="btn btn-danger" type="submit">Yes, delete it!</button>
             <a href="index.php"><button class="btn btn-warning" type="button">No, go back!</button></a>
         </form>

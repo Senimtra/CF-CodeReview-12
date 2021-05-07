@@ -5,8 +5,9 @@ if ($_POST) {
     $loc_name = $_POST['loc_name'];
     $price = $_POST['price'];
     $id = $_POST['id'];
+    $loc_image = $_POST['loc_image'];
 
-    $sql = "UPDATE locations SET loc_name = '$loc_name', image = '$image' WHERE id = {$id}";
+    $sql = "UPDATE locations SET loc_name = '$loc_name', price = '$price', loc_image = '$loc_image' WHERE id = {$id}";
 
     if ($connect->query($sql) === TRUE) {
         $class = "success";
