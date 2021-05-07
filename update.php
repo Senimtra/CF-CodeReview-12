@@ -41,6 +41,7 @@ if ($_GET['id']) {
 </head>
 
 <body>
+    <?php include_once 'header.php' ?>
     <?php include_once "navbar.php" ?>
     <fieldset>
         <legend class='h2'>Update request <img class='img-thumbnail rounded-circle' src='<?php echo $loc_image ?>' alt="<?php echo $loc_name ?>"></legend>

@@ -43,6 +43,7 @@ if ($_GET['id']) {
 </head>
 
 <body>
+    <?php include_once 'header.php' ?>
     <?php include_once "navbar.php" ?>
     <fieldset>
         <legend class='h2 mb-3'>Delete request <img class='img-thumbnail rounded-circle' src='<?php echo $loc_image ?>' alt="<?php echo $loc_name ?>"></legend>

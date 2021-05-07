@@ -37,6 +37,7 @@ if ($_GET['id']) {
 </head>
 
 <body>
+    <?php include_once 'header.php' ?>
     <?php include_once "navbar.php" ?>
     <div class="container-fluid">
         <div class="row g-5 px-5 mt-2">

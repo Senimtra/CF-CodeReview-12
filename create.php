@@ -17,6 +17,7 @@
 </head>
 
 <body>
+    <?php include_once 'header.php' ?>
     <?php include_once 'navbar.php' ?>
     <fieldset>
         <legend class='h2'>Add Location</legend>
