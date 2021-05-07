@@ -14,6 +14,7 @@
             </ul>
             <ul class="nav-item">
                 <li>
+                    <button type="button" class="btn btn-sm btn-secondary mt-2 me-1">API</button>
                     <button type="button" class="btn btn-sm btn-secondary mt-2" onclick="funnyTask()">Joke!</button>
                 </li>
             </ul>

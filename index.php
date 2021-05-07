@@ -8,16 +8,33 @@ if (mysqli_num_rows($result)  > 0) {
         $tbody .= "
         <div class='col-4'>
             <div class='p-4 border card'>
-                <div><img class='img-thumbnail' src='" . $row['loc_image'] . "'></div>
-                <div>$row[loc_name]</div>
-                <div>$row[price]</div>
-                <div><a href='update.php?id=" . $row['id'] . "'><button class='btn btn-primary btn-sm' type='button'>Edit</button></a><a href='delete.php?id=" . $row['id'] . "'><button class='btn btn-danger btn-sm' type='button'>Delete</button></a><a href='details.php?id=" . $row['id'] . "'><button class='btn btn-success btn-sm' type='button'>Details</button></a></div>
+                <div><img class='cardImg' src='" . $row['loc_image'] . "'></div>
+                <div class='cardTitle mt-3'>$row[loc_name]</div>
+                <div class='cardDshort mt-1'>$row[descr_short]</div>
+                <div class='cardPrice mt-1'>$ $row[price]</div>
+                <div class='btn-group mt-4'>
+                <button type='button' class='btn btn-secondary'><a href='update.php?id=" . $row['id'] . "'>Edit</a></button>
+                <button type='button' class='btn btn-secondary'><a href='delete.php?id=" . $row['id'] . "'>Delete</a></button>
+                <button type='button' class='btn btn-secondary'><a href='details.php?id=" . $row['id'] . "'>Details</a></button>
+                </div>
             </div>
         </div>";
     };
 } else {
     $tbody =  "<tr><td colspan='5'><center>No Data Available </center></td></tr>";
 }
+
+// <div class="btn-group btn-group-toggle" data-toggle="buttons">
+//   <label class="btn btn-secondary active">
+//     <input type="radio" name="options" id="option1" autocomplete="off" checked> Active
+//   </label>
+//   <label class="btn btn-secondary">
+//     <input type="radio" name="options" id="option2" autocomplete="off"> Radio
+//   </label>
+//   <label class="btn btn-secondary">
+//     <input type="radio" name="options" id="option3" autocomplete="off"> Radio
+//   </label>
+// </div>
 
 $connect->close();
 ?>
@@ -37,10 +54,11 @@ $connect->close();
     <?php include_once 'header.php' ?>
     <?php include_once 'navbar.php' ?>
     <div class="container-fluid">
-        <div class="row g-5 px-5 mt-2">
+        <div class="row g-4 px-5 mt-2">
             <?= $tbody; ?>
         </div>
     </div>
+    <?php include_once 'footer.php' ?>
 </body>
 
 </html>
