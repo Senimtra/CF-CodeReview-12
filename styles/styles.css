@@ -3,6 +3,14 @@ body {
   background-size: cover;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scrollbar-width: none;
+}
+
 .manageProduct {
   margin: auto;
 }
@@ -19,5 +27,9 @@ td {
 
 tr {
   text-align: center;
+}
+
+#map {
+  height: 100%;
 }
 /*# sourceMappingURL=styles.css.map */

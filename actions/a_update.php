@@ -1,29 +1,19 @@
 <?php
 require_once 'db_connect.php';
-require_once 'file_upload.php';
 
 if ($_POST) {
-    $name = $_POST['name'];
+    $loc_name = $_POST['loc_name'];
     $price = $_POST['price'];
     $id = $_POST['id'];
-    //variable for upload pictures errors is initialized
-    $uploadError = '';
 
-    $picture = file_upload($_FILES['picture']); //file_upload() called  
-    if ($picture->error === 0) {
-        ($_POST["picture"] == "product.png") ?: unlink("../pictures/$_POST[picture]");
-        $sql = "UPDATE locations SET name = '$name', price = $price, picture = '$picture->fileName' WHERE id = {$id}";
-    } else {
-        $sql = "UPDATE locations SET name = '$name', price = $price WHERE id = {$id}";
-    }
+    $sql = "UPDATE locations SET loc_name = '$loc_name', image = '$image' WHERE id = {$id}";
+
     if ($connect->query($sql) === TRUE) {
         $class = "success";
         $message = "The record was successfully updated";
-        $uploadError = ($picture->error != 0) ? $picture->ErrorMessage : '';
     } else {
         $class = "danger";
         $message = "Error while updating record : <br>" . $connect->error;
-        $uploadError = ($picture->error != 0) ? $picture->ErrorMessage : '';
     }
     $connect->close();
 } else {
@@ -37,10 +27,12 @@ if ($_POST) {
 <head>
     <meta charset="UTF-8">
     <title>Update</title>
-    <?php require_once '../components/boot.php' ?>
+    <?php require_once '../components/bootstrap.php' ?>
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css">
 </head>
 
 <body>
+    <?php include_once '../navbar.php' ?>
     <div class="container">
         <div class="mt-3 mb-3">
             <h1>Update request response</h1>

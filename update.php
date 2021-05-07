@@ -7,9 +7,8 @@ if ($_GET['id']) {
     $result = $connect->query($sql);
     if ($result->num_rows == 1) {
         $data = $result->fetch_assoc();
-        $name = $data['name'];
-        $price = $data['price'];
-        $picture = $data['picture'];
+        $loc_name = $data['loc_name'];
+        $image = $data['image'];
     } else {
         header("location: error.php");
     }
@@ -24,7 +23,7 @@ if ($_GET['id']) {
 
 <head>
     <title>Edit Location</title>
-    <?php require_once 'components/boot.php' ?>
+    <?php require_once 'components/bootstrap.php' ?>
     <style type="text/css">
         fieldset {
             margin: auto;
@@ -41,24 +40,24 @@ if ($_GET['id']) {
 
 <body>
     <fieldset>
-        <legend class='h2'>Update request <img class='img-thumbnail rounded-circle' src='pictures/<?php echo $picture ?>' alt="<?php echo $name ?>"></legend>
-        <form action="actions/a_update.php" method="post" enctype="multipart/form-data">
+        <legend class='h2'>Update request <img class='img-thumbnail rounded-circle' src='<?php echo $image ?>' alt="<?php echo $loc_name ?>"></legend>
+        <form action="actions/a_update.php" method="post">
             <table class="table">
                 <tr>
                     <th>Name</th>
-                    <td><input class="form-control" type="text" name="name" placeholder="Location Name" value="<?php echo $name ?>" /></td>
+                    <td><input class="form-control" type="text" name="name" placeholder="Location Name" value="<?php echo $loc_name ?>" /></td>
                 </tr>
                 <tr>
                     <th>Price</th>
                     <td><input class="form-control" type="number" name="price" step="any" placeholder="Price" value="<?php echo $price ?>" /></td>
                 </tr>
                 <tr>
-                    <th>Picture</th>
-                    <td><input class="form-control" type="file" name="picture" /></td>
+                    <th>Image</th>
+                    <td><input class="form-control" type="text" name="image" value="<?php echo $image ?>" /></td>
                 </tr>
                 <tr>
                     <input type="hidden" name="id" value="<?php echo $data['id'] ?>" />
-                    <input type="hidden" name="picture" value="<?php echo $data['picture'] ?>" />
+                    <input type="hidden" name="image" value="<?php echo $data['image'] ?>" />
                     <td><button class="btn btn-success" type="submit">Save Changes</button></td>
                     <td><a href="index.php"><button class="btn btn-warning" type="button">Back</button></a></td>
                 </tr>

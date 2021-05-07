@@ -6,8 +6,8 @@ CREATE TABLE `cr12_mounteverest_gregor`.`locations` (
     `price` FLOAT NOT NULL,
     `descr_short` VARCHAR(100) NOT NULL,
     `descr_long` VARCHAR(255) NOT NULL,
-    `longitude` VARCHAR(20) NOT NULL,
-    `latitude` VARCHAR(20) NOT NULL,
+    `longitude` FLOAT(20,17) NOT NULL,
+    `latitude` FLOAT(20,17) NOT NULL,
     `image` VARCHAR(255) NOT NULL
 );
 

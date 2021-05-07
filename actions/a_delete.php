@@ -3,8 +3,7 @@ require_once 'db_connect.php';
 
 if ($_POST) {
     $id = $_POST['id'];
-    $picture = $_POST['picture'];
-    ($picture == "product.png") ?: unlink("../pictures/$picture");
+    $image = $_POST['image'];
 
     $sql = "DELETE FROM locations WHERE id = {$id}";
     if ($connect->query($sql) === TRUE) {
@@ -26,10 +25,12 @@ if ($_POST) {
 <head>
     <meta charset="UTF-8">
     <title>Delete</title>
-    <?php require_once '../components/boot.php' ?>
+    <?php require_once '../components/bootstrap.php' ?>
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css">
 </head>
 
 <body>
+    <?php include_once "../navbar.php" ?>
     <div class="container">
         <div class="mt-3 mb-3">
             <h1>Delete request response</h1>

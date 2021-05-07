@@ -1,15 +1,11 @@
 <?php
 require_once 'db_connect.php';
-require_once 'file_upload.php';
 
 if ($_POST) {
     $name = $_POST['name'];
     $price = $_POST['price'];
-    $uploadError = '';
-    //this function exists in the service file upload.
-    $picture = file_upload($_FILES['picture']);
 
-    $sql = "INSERT INTO locations (name, price, picture) VALUES ('$name', $price, '$picture->fileName')";
+    $sql = "INSERT INTO locations (loc_name, price, image) VALUES ('$loc_name', $price, '$->fileName')";
 
     if ($connect->query($sql) === true) {
         $class = "success";
@@ -18,11 +14,9 @@ if ($_POST) {
             <td> $name </td>
             <td> $price </td>
             </tr></table><hr>";
-        $uploadError = ($picture->error != 0) ? $picture->ErrorMessage : '';
     } else {
         $class = "danger";
         $message = "Error while creating record. Try again: <br>" . $connect->error;
-        $uploadError = ($picture->error != 0) ? $picture->ErrorMessage : '';
     }
     $connect->close();
 } else {
@@ -36,10 +30,11 @@ if ($_POST) {
 <head>
     <meta charset="UTF-8">
     <title>Update</title>
-    <?php require_once '../components/boot.php' ?>
+    <?php require_once '../components/bootstrap.php' ?>
 </head>
 
 <body>
+    <?php include_once '../navbar.php' ?>
     <div class="container">
         <div class="mt-3 mb-3">
             <h1>Create request response</h1>

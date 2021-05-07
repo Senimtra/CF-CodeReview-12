@@ -10,18 +10,11 @@ if ($_GET['id']) {
     $result = $connect->query($sql);
     if ($result->num_rows == 1) {
         $data = $result->fetch_assoc();
-        $media_title = $data['media_title'];
-        $media_type = $data['media_type'];
-        $media_date = $data['media_date'];
-        $media_isbn = $data['media_isbn'];
-        $media_descr = $data['media_descr'];
-        $media_image = $data['media_image'];
-        $media_status = $data['media_status'];
-        $author_fname = $data['author_fname'];
-        $author_lname = $data['author_lname'];
-        $pub_name = $data['pub_name'];
-        $pub_address = $data['pub_address'];
-        $pub_size = $data['pub_size'];
+        $loc_name = $data['loc_name'];
+        $price = $data['price'];
+        $image = $data['image'];
+        $longitude = $data['longitude'];
+        $latitude = $data['latitude'];
     } else {
         header("location: error.php");
     }
@@ -37,59 +30,51 @@ if ($_GET['id']) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Media Details</title>
+    <title>Location Details</title>
     <?php require_once 'components/bootstrap.php' ?>
-    <link rel="stylesheet" type="text/css" href="../styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
 
 <body>
-    <?php include_once "header.php" ?>
     <?php include_once "navbar.php" ?>
-    <div class="container-fluid mx-auto px-5">
-        <div class="wrapSideOut mx-lg-5">
-            <div class="wrapSideIn mx-lg-5">
-                <div class="wrapIndex mx-5">
-                    <div id="groundInd">
-                        <div id="borderInd">
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="card p-3 m-3">
-                                                <div class="row g-0">
-                                                    <div class="col-md-4 cardImg">
-                                                        <img src="<?php echo $media_image ?>" alt="...">
-                                                    </div>
-                                                    <div class="col-md"></div>
-                                                    <div class="col-md-7">
-                                                        <div class="card-body">
-                                                            <h5 class="card-title"><?php echo $media_title ?></h5>
-                                                            <p class="card-text"><?php echo $author_fname ?>&nbsp;<?php echo $author_lname ?>,&nbsp;<?php echo $media_date ?>,&nbsp;<?php echo $media_type ?></p>
-                                                            <p class="card-text"><?php echo $media_descr ?></p>
-                                                            <p class="card-text">
-                                                            <div class="publisher d-flex">
-                                                                <div>Publisher:&nbsp;&nbsp;&nbsp;</div>
-                                                                <div><?php echo $pub_name ?><br><?php echo $pub_address ?></div>
-                                                            </div>
-                                                            </p>
-                                                            <p class="card-text">Publisher size: <?php echo $pub_size ?></p>
-                                                            <p class="card-text">ISBN: <?php echo $media_isbn ?></p>
-                                                            <p class="card-text"><strong class="text-muted">Status: <?php echo $media_status ?>&nbsp;&nbsp;|&nbsp;&nbsp;id: <?php echo $id ?></strong></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
+    <div class="container-fluid">
+        <div class="row g-5 px-5 mt-2">
+            <div class="col-7">
+                <div class="card"><img src="<?php echo $image ?>"></div>
+            </div>
+            <div class="col-5">
+                <div id="map"></div>
             </div>
         </div>
-    </div>
-    <?php include_once "footer.php" ?>
+        <div class="row g-5 px-5 mt-2">
+            <div class="col">
+                <div class="card"><?php echo $loc_name . "<br>$" . $price ?></div>
+            </div>
+        </div>
+        <div class="row g-5 px-5 mt-2">
+            <div><a href='update.php?id={$id}'><button class='btn btn-primary btn-sm' type='button'>Edit</button></a>
+            </div>
+        </div>
+        <script>
+            var map;
+
+            function initMap() {
+                var vienna = {
+                    lat: <?php echo $longitude ?>,
+                    lng: <?php echo $latitude ?>
+                };
+                map = new google.maps.Map(document.getElementById('map'), {
+                    center: vienna,
+                    zoom: 4
+                });
+                var pinpoint = new google.maps.Marker({
+                    position: vienna,
+                    map: map
+                });
+            }
+        </script>
+
+        <script src=" https://maps.googleapis.com/maps/api/js?key=AIzaSyBtjaD-saUZQ47PbxigOg25cvuO6_SuX3M&callback=initMap" async defer></script>
 </body>
 
 </html>

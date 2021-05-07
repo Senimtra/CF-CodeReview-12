@@ -5,12 +5,15 @@ $result = mysqli_query($connect, $sql);
 $tbody = ''; //this variable will hold the body for the table
 if (mysqli_num_rows($result)  > 0) {
     while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-        $tbody .= "<tr>
-            <td><img class='img-thumbnail' src='" . $row['image'] . "'</td>
-            <td>" . $row['loc_name'] . "</td>
-            <td>" . $row['price'] . "</td>
-            <td><a href='update.php?id=" . $row['id'] . "'><button class='btn btn-primary btn-sm' type='button'>Edit</button></a><a href='delete.php?id=" . $row['id'] . "'><button class='btn btn-danger btn-sm' type='button'>Delete</button></a><a href='details.php?id=" . $row['id'] . "'><button class='btn btn-success btn-sm' type='button'>Details</button></a></td>
-            </tr>";
+        $tbody .= "
+        <div class='col-4'>
+            <div class='p-4 border card'>
+                <div><img class='img-thumbnail' src='" . $row['image'] . "'></div>
+                <div>$row[loc_name]</div>
+                <div>$row[price]</div>
+                <div><a href='update.php?id=" . $row['id'] . "'><button class='btn btn-primary btn-sm' type='button'>Edit</button></a><a href='delete.php?id=" . $row['id'] . "'><button class='btn btn-danger btn-sm' type='button'>Delete</button></a><a href='details.php?id=" . $row['id'] . "'><button class='btn btn-success btn-sm' type='button'>Details</button></a></div>
+            </div>
+        </div>";
     };
 } else {
     $tbody =  "<tr><td colspan='5'><center>No Data Available </center></td></tr>";
@@ -26,30 +29,16 @@ $connect->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mount Everest Travel Agency</title>
-    <?php require_once 'components/boot.php' ?>
+    <?php require_once 'components/bootstrap.php' ?>
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
 
 <body>
     <?php include_once 'navbar.php' ?>
-    <div class="manageProduct w-75 mt-3">
-        <div class='mb-3'>
-            <a href="create.php"><button class='btn btn-primary' type="button">Add Location</button></a>
+    <div class="container-fluid">
+        <div class="row g-5 px-5 mt-2">
+            <?= $tbody; ?>
         </div>
-        <p class='h2'>Locations</p>
-        <table class='table table-striped'>
-            <thead class='table-success'>
-                <tr>
-                    <th>Picture</th>
-                    <th>Name</th>
-                    <th>price</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?= $tbody; ?>
-            </tbody>
-        </table>
     </div>
 </body>
 

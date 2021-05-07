@@ -3,6 +3,18 @@ body {
   background-size: cover;
 }
 
+// ### Hide the scrollbar in Chrome, Safari and Opera ###
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+// ### Hide the scrollbar in Firefox ###
+
+html {
+  scrollbar-width: none;
+}
+
 .manageProduct {
   margin: auto;
 }
@@ -19,4 +31,8 @@ td {
 
 tr {
   text-align: center;
+}
+
+#map {
+  height: 100%;
 }
