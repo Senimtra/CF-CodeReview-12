@@ -6,13 +6,13 @@ $tbody = ''; //this variable will hold the body for the table
 if (mysqli_num_rows($result)  > 0) {
     while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
         $tbody .= "
-        <div class='col-4'>
-            <div class='p-4 border card'>
+        <div class='col-4 d-flex grow'>
+            <div class='p-4 border card d-flex flex-grow'>
                 <div><img class='cardImg' src='" . $row['loc_image'] . "'></div>
                 <div class='cardTitle mt-3'>$row[loc_name]</div>
                 <div class='cardDshort mt-1'>$row[descr_short]</div>
-                <div class='cardPrice mt-1'>$ $row[price]</div>
-                <div class='btn-group mt-4'>
+                <div class='cardPrice mt-2'>$ $row[price]</div>
+                <div class='btn-group mt-3'>
                 <button type='button' class='btn btn-secondary'><a href='update.php?id=" . $row['id'] . "'>Edit</a></button>
                 <button type='button' class='btn btn-secondary'><a href='delete.php?id=" . $row['id'] . "'>Delete</a></button>
                 <button type='button' class='btn btn-secondary'><a href='details.php?id=" . $row['id'] . "'>Details</a></button>

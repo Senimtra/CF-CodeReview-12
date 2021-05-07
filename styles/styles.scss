@@ -90,5 +90,8 @@ tr {
   text-decoration: underline;
 }
 
-.cardBtns {
+.btn-group {
+  // border: 1px solid green;
+  display: flex;
+  align-items: flex-end;
 }
