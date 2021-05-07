@@ -16,6 +16,7 @@
 </head>
 
 <body>
+    <?php include_once 'navbar.php' ?>
     <fieldset>
         <legend class='h2'>Add Location</legend>
         <form action="actions/a_create.php" method="post" enctype="multipart/form-data">
