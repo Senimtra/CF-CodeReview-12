@@ -28,7 +28,7 @@ $connect->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mount Everest Travel Agency</title>
     <?php require_once 'components/boot.php' ?>
-    <link rel="stylesheet" type="text/css" href="../styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
 
 <body>
