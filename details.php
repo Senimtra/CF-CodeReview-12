@@ -13,6 +13,8 @@ if ($_GET['id']) {
         $id = $data['id'];
         $loc_name = $data['loc_name'];
         $price = $data['price'];
+        $descr_short = $data['descr_short'];
+        $descr_long = $data['descr_long'];
         $loc_image = $data['loc_image'];
         $longitude = $data['longitude'];
         $latitude = $data['latitude'];
@@ -50,7 +52,7 @@ if ($_GET['id']) {
         </div>
         <div class="row g-5 px-5 mt-2">
             <div class="col">
-                <div class="card"><?php echo $loc_name . "<br>$" . $price ?></div>
+                <div class="card"><?php echo $loc_name . "<br>$" . $descr_short . "<br>" . $price . "<br>" . $descr_long ?></div>
             </div>
         </div>
         <div class="row g-5 px-5 mt-2">
