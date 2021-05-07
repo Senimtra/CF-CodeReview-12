@@ -3,15 +3,25 @@ body {
   background-size: cover;
 }
 
-// ### Navbar styles begin here ###
+// ### Header styles begin here ###
 
-* {
-  padding: 0;
-  margin: 0;
+#heroImg {
+  border-radius: calc(0.2vw + 0.2vh + 0.1vmin);
+  background-image: url("../images/header.jpg");
+  padding-bottom: 30%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
 }
+
+// ### Navbar styles begin here ###
 
 li {
   list-style-type: none;
+}
+
+#jokes {
+  width: 100%;
 }
 
 // ### Hide the scrollbar in Chrome, Safari and Opera ###

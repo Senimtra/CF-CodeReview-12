@@ -1,4 +1,4 @@
-<nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-dark">
+<nav class="navbar sticky-top d-flex flex-column navbar-expand-sm navbar-dark bg-dark">
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -14,7 +14,7 @@
             </ul>
             <ul class="nav-item">
                 <li>
-                    <button type="button" class="btn btn-secondary" onclick="funnyTask()">Joke!</button>
+                    <button type="button" class="btn btn-sm btn-secondary mt-2" onclick="funnyTask()">Joke!</button>
                 </li>
             </ul>
         </div>
@@ -34,4 +34,6 @@
             funnyTask();
         </script>
     </div>
+    <div id="jokes" class="text-light sticky-top border-top border-secondary pt-1 text-center"></div>
+
 </nav>

@@ -3,13 +3,21 @@ body {
   background-size: cover;
 }
 
-* {
-  padding: 0;
-  margin: 0;
+#heroImg {
+  border-radius: calc(0.2vw + 0.2vh + 0.1vmin);
+  background-image: url("../images/header.jpg");
+  padding-bottom: 30%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
 }
 
 li {
   list-style-type: none;
+}
+
+#jokes {
+  width: 100%;
 }
 
 ::-webkit-scrollbar {
