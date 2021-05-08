@@ -18,7 +18,7 @@
             <ul class="nav-item text-light">
                 <li>
                     <div class="dropdown">
-                        <button class="btn btn-sm btn-secondary dropdown-toggle mt-2 me-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Everest API</button>
+                        <button class="btn btn-sm btn-secondary dropdown-toggle mt-2 me-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Everest Travels API</button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                             <li><a class="dropdown-item" href="api/webservice.php?id=all">Example ?id=all</a></li>
                             <li><a class="dropdown-item" href="api/webservice.php?id=1">Example ?id=1</a></li>
@@ -28,8 +28,8 @@
                             <li><a class="dropdown-item" href="api/webservice.php?id=30">Example ?id=30</a></li>
                             <li><a class="dropdown-item" href="api/webservice.php?id=39">Example ?id=39</a></li>
                         </ul>
-                        <button type="button" class="btn btn-sm btn-secondary mt-2 me-1"><a href="libquery.php">Read a book!</a></button>
-                        <button type="button" class="btn btn-sm btn-secondary mt-2 me-1"><a href="petsquery.php">Adopt a pet!</a></button>
+                        <button type="button" class="btn btn-sm btn-secondary mt-2 me-1"><a href="libquery.php">Partners: Books!</a></button>
+                        <button type="button" class="btn btn-sm btn-secondary mt-2 me-1"><a href="petsquery.php">Partners: Pets!</a></button>
                         <button type="button" class="btn btn-sm btn-secondary mt-2" onclick="funnyTask()">Joke!</button>
                     </div>
                 </li>

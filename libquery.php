@@ -35,8 +35,8 @@ foreach ($media as $data) {
     <div class="container-fluid px-5">
         <div class="row">
             <div class="card mt-5 py-4 px-3">
-                <p class='h2 text-center py-2'>Available media on our Partner-Website!<button class="btn library">Big Library</button></p>
-                <button class="btn btn-sm btn-dark mb-3"><a href="http://shallow.codes/FSWDC_CodeReview_11/php/index.php">API query to my hosted CodeReview10 - Big Library</a></button>
+                <p class='h2 text-center py-2'>Available media on our Partner-Website!</p>
+                <button class="btn btn-sm btn-dark mb-3"><a href="http://shallow.codes/FSWDC_CodeReview_10/php/index.php">API query to my hosted CodeReview10 - Big Library</a></button>
                 <table class='table table-striped table-secondary'>
                     <thead class='table'>
                         <tr>

@@ -101,4 +101,9 @@ tr {
       -ms-flex-align: end;
           align-items: flex-end;
 }
+
+.library {
+  background-color: #432818;
+  color: black;
+}
 /*# sourceMappingURL=styles.css.map */
