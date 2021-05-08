@@ -79,6 +79,7 @@ if ($_GET['id']) {
             </script>
 
             <script src=" https://maps.googleapis.com/maps/api/js?key=AIzaSyBtjaD-saUZQ47PbxigOg25cvuO6_SuX3M&callback=initMap" async defer></script>
+        </div>
 </body>
 
 </html>

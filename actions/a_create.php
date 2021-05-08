@@ -37,11 +37,12 @@ if ($_POST) {
     <meta charset="UTF-8">
     <title>Update</title>
     <?php require_once '../components/bootstrap.php' ?>
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css">
 </head>
 
 <body>
     <?php include_once "../header.php" ?>
-    <?php include_once '../navbar.php' ?>
+    <?php include_once '../navbar_a.php' ?>
     <div class="container">
         <div class="mt-3 mb-3">
             <h1>Create request response</h1>

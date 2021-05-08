@@ -31,7 +31,7 @@ foreach ($pets as $data) {
 
 <body>
     <?php include_once '../header.php' ?>
-    <?php include_once '../navbar.php' ?>
+    <?php include_once '../navbar_a.php' ?>
     <div class="container">
         <div class="row">
             <p class='h2'>Not yet adopted pets - waiting for a new friend!</p>
