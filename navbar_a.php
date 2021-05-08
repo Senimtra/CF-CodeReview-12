@@ -8,7 +8,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../index.php">Home</a>
+                    <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../create.php">Add Location</a>
@@ -20,16 +20,16 @@
                     <div class="dropdown">
                         <button class="btn btn-sm btn-secondary dropdown-toggle mt-2 me-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Everest API</button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item" href="../api/webservice.php?id=all">Example ?id=all</a></li>
-                            <li><a class="dropdown-item" href="../api/webservice.php?id=1">Example ?id=1</a></li>
-                            <li><a class="dropdown-item" href="../api/webservice.php?id=7">Example ?id=7</a></li>
-                            <li><a class="dropdown-item" href="../api/webservice.php?id=16">Example ?id=16</a></li>
-                            <li><a class="dropdown-item" href="../api/webservice.php?id=24">Example ?id=24</a></li>
-                            <li><a class="dropdown-item" href="../api/webservice.php?id=30">Example ?id=30</a></li>
-                            <li><a class="dropdown-item" href="../api/webservice.php?id=39">Example ?id=39</a></li>
+                            <li><a class="dropdown-item" href="api/webservice.php?id=all">Example ?id=all</a></li>
+                            <li><a class="dropdown-item" href="api/webservice.php?id=1">Example ?id=1</a></li>
+                            <li><a class="dropdown-item" href="api/webservice.php?id=7">Example ?id=7</a></li>
+                            <li><a class="dropdown-item" href="api/webservice.php?id=16">Example ?id=16</a></li>
+                            <li><a class="dropdown-item" href="api/webservice.php?id=24">Example ?id=24</a></li>
+                            <li><a class="dropdown-item" href="api/webservice.php?id=30">Example ?id=30</a></li>
+                            <li><a class="dropdown-item" href="api/webservice.php?id=39">Example ?id=39</a></li>
                         </ul>
-                        <button type="button" class="btn btn-sm btn-secondary mt-2 me-1"><a href="../api/petadopt_CHECK.php">Adopt a pet!</a></button>
-                        <button type="button" class="btn btn-sm btn-secondary mt-2" onclick="funnyTask()">Joke!</button>
+                        <button type="button" class="btn btn-sm btn-secondary mt-2 me-1"><a href="../petsquery.php">Adopt a pet!</a></button>
+                        <button type="button" class="btn btn-sm btn-secondary mt-2" onclick="funnyTask2()">Joke!</button>
                     </div>
                 </li>
             </ul>

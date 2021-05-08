@@ -28,7 +28,7 @@
                             <li><a class="dropdown-item" href="api/webservice.php?id=30">Example ?id=30</a></li>
                             <li><a class="dropdown-item" href="api/webservice.php?id=39">Example ?id=39</a></li>
                         </ul>
-                        <button type="button" class="btn btn-sm btn-secondary mt-2 me-1"><a href="api/petadopt_CHECK.php">Adopt a pet!</a></button>
+                        <button type="button" class="btn btn-sm btn-secondary mt-2 me-1"><a href="petsquery.php">Adopt a pet!</a></button>
                         <button type="button" class="btn btn-sm btn-secondary mt-2" onclick="funnyTask()">Joke!</button>
                     </div>
                 </li>
