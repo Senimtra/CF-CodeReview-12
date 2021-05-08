@@ -35,6 +35,5 @@
             funnyTask();
         </script>
     </div>
-    <div id="jokes" class="text-light sticky-top border-top border-secondary pt-1 text-center">&nbsp;</div>
-
+    <div id="jokes" class="text-light border-top border-secondary pt-1 text-center">&nbsp;</div>
 </nav>

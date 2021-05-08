@@ -68,7 +68,7 @@ if ($_GET['id']) {
                     };
                     map = new google.maps.Map(document.getElementById('map'), {
                         center: vienna,
-                        zoom: 4
+                        zoom: 5
                     });
                     var pinpoint = new google.maps.Marker({
                         position: vienna,
