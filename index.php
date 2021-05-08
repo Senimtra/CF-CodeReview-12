@@ -11,6 +11,7 @@ if (mysqli_num_rows($result)  > 0) {
                 <div><img class='cardImg' src='" . $row['loc_image'] . "'></div>
                 <div class='cardTitle mt-3'>$row[loc_name]</div>
                 <div class='cardDshort mt-1'>$row[descr_short]</div>
+                <div class='cardWikiSm'><a href='$row[wiki_link]'>wikipedia.com</a></div>
                 <div class='cardPrice mt-2'>$ $row[price]</div>
                 <div class='btn-group mt-3'>
                 <button type='button' class='btn btn-secondary'><a href='update.php?id=" . $row['id'] . "'>Edit</a></button>
@@ -23,18 +24,6 @@ if (mysqli_num_rows($result)  > 0) {
 } else {
     $tbody =  "<tr><td colspan='5'><center>No Data Available </center></td></tr>";
 }
-
-// <div class="btn-group btn-group-toggle" data-toggle="buttons">
-//   <label class="btn btn-secondary active">
-//     <input type="radio" name="options" id="option1" autocomplete="off" checked> Active
-//   </label>
-//   <label class="btn btn-secondary">
-//     <input type="radio" name="options" id="option2" autocomplete="off"> Radio
-//   </label>
-//   <label class="btn btn-secondary">
-//     <input type="radio" name="options" id="option3" autocomplete="off"> Radio
-//   </label>
-// </div>
 
 $connect->close();
 ?>

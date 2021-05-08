@@ -18,6 +18,7 @@ if ($_GET['id']) {
         $loc_image = $data['loc_image'];
         $longitude = $data['longitude'];
         $latitude = $data['latitude'];
+        $wiki_link = $data['wiki_link'];
     } else {
         header("location: error.php");
     }
@@ -52,7 +53,7 @@ if ($_GET['id']) {
         </div>
         <div class="row g-5 px-5 mt-2">
             <div class="col">
-                <div class="card"><?php echo $loc_name . "<br>$" . $descr_short . "<br>" . $price . "<br>" . $descr_long ?></div>
+                <div class="card"><?php echo $loc_name . "<br>$" . $descr_short . "<br>" . $price . "<br>" . $descr_long . "<br>" . $wiki_link ?></div>
             </div>
         </div>
         <div class="row g-5 px-5 mt-2">

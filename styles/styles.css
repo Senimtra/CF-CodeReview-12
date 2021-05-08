@@ -3,8 +3,8 @@ body {
   background-size: cover;
 }
 
-a,
-a:hover {
+.btn-group a,
+.btn-group a:hover {
   color: white;
   text-decoration: none;
 }
@@ -83,6 +83,10 @@ tr {
       -ms-flex-pack: end;
           justify-content: flex-end;
   text-decoration: underline;
+}
+
+.cardWikiSm {
+  font-size: 90%;
 }
 
 .btn-group {
