@@ -2,12 +2,17 @@
 require_once 'db_connect.php';
 
 if ($_POST) {
+    $id = $_POST['id'];
     $loc_name = $_POST['loc_name'];
     $price = $_POST['price'];
-    $id = $_POST['id'];
+    $descr_short = $_POST['descr_short'];
+    $descr_long = $_POST['descr_long'];
+    $wiki_link = $_POST['wiki_link'];
+    $longitude = $_POST['longitude'];
+    $latitude = $_POST['latitude'];
     $loc_image = $_POST['loc_image'];
 
-    $sql = "UPDATE locations SET loc_name = '$loc_name', price = '$price', loc_image = '$loc_image' WHERE id = {$id}";
+    $sql = "UPDATE locations SET loc_name = '$loc_name', price = '$price', descr_short = '$descr_short', descr_long = '$descr_long', wiki_link = '$wiki_link', longitude = '$longitude', latitude = '$latitude', loc_image = '$loc_image' WHERE id = {$id}";
 
     if ($connect->query($sql) === TRUE) {
         $class = "success";
@@ -33,6 +38,7 @@ if ($_POST) {
 </head>
 
 <body>
+    <?php include_once '../header.php' ?>
     <?php include_once '../navbar.php' ?>
     <div class="container">
         <div class="mt-3 mb-3">

@@ -30,6 +30,7 @@ if ($_POST) {
 </head>
 
 <body>
+    <?php include_once "../header.php" ?>
     <?php include_once "../navbar.php" ?>
     <div class="container">
         <div class="mt-3 mb-3">
