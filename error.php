@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Error</title>
+
+    <!-- ### Add Bootstrap 5.0 & own CSS stylesheet ### -->
+
     <?php require_once 'components/bootstrap.php' ?>
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>

@@ -35,22 +35,37 @@ if ($_GET['id']) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Location Details</title>
+
+    <!-- ### Add Bootstrap 5.0 & own CSS stylesheet ### -->
+
     <?php require_once 'components/bootstrap.php' ?>
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
 
 <body>
+
+    <!-- ### Include Header & Navbar ### -->
+
     <?php include_once 'header.php' ?>
     <?php include_once "navbar.php" ?>
     <div class="container-fluid">
         <div class="row g-4 px-5 mt-2">
             <div class="col-7">
+
+                <!-- ### Location Details Image ### -->
+
                 <div class="card p-3"><img src="<?php echo $loc_image ?>"></div>
             </div>
+
+            <!-- ### Google Maps API container ### -->
+
             <div class="col-5">
                 <div id="map"></div>
             </div>
         </div>
+
+        <!-- ### Location descriptions ### -->
+
         <div class="row g-4 px-5 mt-2">
             <div class="col">
                 <div class="card p-3">
@@ -61,9 +76,15 @@ if ($_GET['id']) {
                 </div>
             </div>
         </div>
+
+        <!-- ### Navigation buttons ### -->
+
         <div class="row g-5 px-5 mt-2">
             <div><a href='update.php?id=<?php echo $id ?>'><button class='btn btn-primary btn-sm' type='button'>Edit</button></a><a href='delete.php?id=<?php echo $id ?>'><button class='btn btn-danger btn-sm' type='button'>Delete</button></a><a href="index.php"><button class="btn btn-warning btn-sm" type="button">Back</button></a>
             </div>
+
+            <!-- ### Google Maps API function ### -->
+
             <script>
                 var map;
 

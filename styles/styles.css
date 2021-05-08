@@ -13,16 +13,16 @@ body {
   text-decoration: none;
 }
 
+li {
+  list-style-type: none;
+}
+
 #heroImg {
   background-image: url("../images/header.jpg");
   padding-bottom: 30%;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-}
-
-li {
-  list-style-type: none;
 }
 
 #jokes {
@@ -37,18 +37,9 @@ html {
   scrollbar-width: none;
 }
 
-.manageProduct {
-  margin: auto;
-}
-
 .img-thumbnail {
   width: 70px !important;
   height: 70px !important;
-}
-
-td {
-  text-align: left;
-  vertical-align: middle;
 }
 
 tr {

@@ -1,3 +1,5 @@
+// ### general styles begin here ###
+
 body {
   background: url(../images/background.jpg) no-repeat center fixed;
   background-size: cover;
@@ -13,6 +15,10 @@ body {
   text-decoration: none;
 }
 
+li {
+  list-style-type: none;
+}
+
 // ### Header styles begin here ###
 
 #heroImg {
@@ -24,10 +30,6 @@ body {
 }
 
 // ### Navbar styles begin here ###
-
-li {
-  list-style-type: none;
-}
 
 #jokes {
   width: 100%;
@@ -45,18 +47,9 @@ html {
   scrollbar-width: none;
 }
 
-.manageProduct {
-  margin: auto;
-}
-
 .img-thumbnail {
   width: 70px !important;
   height: 70px !important;
-}
-
-td {
-  text-align: left;
-  vertical-align: middle;
 }
 
 tr {
@@ -66,6 +59,8 @@ tr {
 #map {
   height: 100%;
 }
+
+// ### Bootstrap card styles begin here ###
 
 .cardImg {
   width: 100%;

@@ -18,6 +18,9 @@
             <ul class="nav-item text-light">
                 <li>
                     <div class="dropdown">
+
+                        <!-- ### Dropdown-button for Everest-API-Output ### -->
+
                         <button class="btn btn-sm btn-secondary dropdown-toggle mt-2 me-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Everest Travels API</button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                             <li><a class="dropdown-item" href="api/webservice.php?id=all">Example ?id=all</a></li>
@@ -28,6 +31,9 @@
                             <li><a class="dropdown-item" href="api/webservice.php?id=30">Example ?id=30</a></li>
                             <li><a class="dropdown-item" href="api/webservice.php?id=39">Example ?id=39</a></li>
                         </ul>
+
+                        <!-- ### Partner-API-buttons & Joke-button ### -->
+
                         <button type="button" class="btn btn-sm btn-secondary mt-2 me-1"><a href="../libquery.php">Partners: Books!</a></button>
                         <button type="button" class="btn btn-sm btn-secondary mt-2 me-1"><a href="../petsquery.php">Partners: Pets!</a></button>
                         <button type="button" class="btn btn-sm btn-secondary mt-2" onclick="funnyTask2()">Joke!</button>
@@ -36,5 +42,8 @@
             </ul>
         </div>
     </div>
+
+    <!-- ### Serri-Jokes-API-container - &nbsp for preventing collapse ### -->
+
     <div id="jokes" class="text-light border-top border-secondary pt-1 text-center">&nbsp;</div>
 </nav>

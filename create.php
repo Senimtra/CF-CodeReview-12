@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ### Add Bootstrap 5.0 & own CSS stylesheet ### -->
+
     <?php require_once 'components/bootstrap.php' ?>
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <title>Add Location</title>
@@ -17,6 +20,9 @@
 </head>
 
 <body>
+
+    <!-- ### Include Header & Navbar ### -->
+
     <?php include_once 'header.php' ?>
     <?php include_once 'navbar.php' ?>
     <fieldset>

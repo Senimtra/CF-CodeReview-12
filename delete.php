@@ -26,6 +26,9 @@ if ($_GET['id']) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delete Location</title>
+
+    <!-- ### Add Bootstrap 5.0 & own CSS stylesheet ### -->
+
     <?php require_once 'components/bootstrap.php' ?>
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <style type="text/css">
@@ -43,6 +46,9 @@ if ($_GET['id']) {
 </head>
 
 <body>
+
+    <!-- ### Including Header & Navbar ### -->
+
     <?php include_once 'header.php' ?>
     <?php include_once "navbar.php" ?>
     <div class="container">
