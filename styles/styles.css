@@ -3,6 +3,8 @@ body {
   background-size: cover;
 }
 
+.btn a,
+.btn a:hover,
 .btn-group a,
 .btn-group a:hover,
 #socialMedia a,
