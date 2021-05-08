@@ -1,3 +1,4 @@
+<?php include_once "api/jokes_AJAX.php" ?>
 <nav class="navbar sticky-top d-flex flex-column navbar-expand-sm navbar-dark bg-dark">
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,21 +20,6 @@
                 </li>
             </ul>
         </div>
-        <script>
-            function funnyTask() {
-                const serriJokes = new XMLHttpRequest();
-                serriJokes.open('GET', 'http://api.serri.codefactory.live/random');
-                serriJokes.responseType = 'json';
-                serriJokes.onload = function(e) {
-                    if (this.status == 200) {
-                        let jokeObj = this.response;
-                        document.getElementById("jokes").innerHTML = jokeObj.joke;
-                    }
-                };
-                serriJokes.send();
-            }
-            funnyTask();
-        </script>
     </div>
     <div id="jokes" class="text-light border-top border-secondary pt-1 text-center">&nbsp;</div>
 </nav>
