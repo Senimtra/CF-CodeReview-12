@@ -43,17 +43,22 @@ if ($_GET['id']) {
     <?php include_once 'header.php' ?>
     <?php include_once "navbar.php" ?>
     <div class="container-fluid">
-        <div class="row g-5 px-5 mt-2">
+        <div class="row g-4 px-5 mt-2">
             <div class="col-7">
-                <div class="card"><img src="<?php echo $loc_image ?>"></div>
+                <div class="card p-3"><img src="<?php echo $loc_image ?>"></div>
             </div>
             <div class="col-5">
                 <div id="map"></div>
             </div>
         </div>
-        <div class="row g-5 px-5 mt-2">
+        <div class="row g-4 px-5 mt-2">
             <div class="col">
-                <div class="card"><?php echo $loc_name . "<br>$" . $descr_short . "<br>" . $price . "<br>" . $descr_long . "<br>" . $wiki_link ?></div>
+                <div class="card p-3">
+                    <div class="cardTitle"><?php echo $loc_name ?>&nbsp;&nbsp;&nbsp;<small>$<?php echo $price ?></small></div>
+                    <div class="cardDshort mt-3"><?php echo $descr_short ?></div>
+                    <div class="cardDlong mt-3"><?php echo $descr_long ?></div>
+                    <div class="cardWikiSm mt-3"><a href="<?php echo $wiki_link ?>">Wikipedia.com</a></div>
+                </div>
             </div>
         </div>
         <div class="row g-5 px-5 mt-2">

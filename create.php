@@ -22,7 +22,7 @@
     <fieldset>
         <legend class='h2'>Add Location</legend>
         <form action="actions/a_create.php" method="post">
-            <table class='table'>
+            <table class='table table-striped table-secondary'>
                 <tr>
                     <th>Name</th>
                     <td><input class='form-control' type="text" name="loc_name" placeholder="Location Name" /></td>

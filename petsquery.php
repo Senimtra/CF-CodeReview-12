@@ -32,24 +32,26 @@ foreach ($pets as $data) {
 <body>
     <?php include_once 'header.php' ?>
     <?php include_once 'navbar.php' ?>
-    <div class="container">
+    <div class="container-fluid px-5">
         <div class="row">
-            <p class='h2'>Not yet adopted pets - waiting for a new friend!</p>
-            <button class="btn btn-sm btn-dark"><a href="http://shallow.codes/FSWDC_CodeReview_11/php/index.php">CodeReview11 - hosted @ shallow.codes</a></button>
-            <table class='table table-striped'>
-                <thead class='table-success'>
-                    <tr>
-                        <th>Picture</th>
-                        <th>Name</th>
-                        <th>Age</th>
-                        <th>Description</th>
-                        <th>Hobbies</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?= $tbody; ?>
-                </tbody>
-            </table>
+            <div class="card mt-5 py-4 px-3">
+                <p class='h2 text-center py-2'>Not yet adopted pets - still waiting for a new friend!</p>
+                <button class="btn btn-sm btn-dark mb-3"><a href="http://shallow.codes/FSWDC_CodeReview_11/php/index.php">API query to my hosted CodeReview11 - Pet Adoption</a></button>
+                <table class='table table-striped table-secondary'>
+                    <thead class='table'>
+                        <tr>
+                            <th>Picture</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Description</th>
+                            <th>Hobbies</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?= $tbody; ?>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
     <?php include_once 'footer.php' ?>
