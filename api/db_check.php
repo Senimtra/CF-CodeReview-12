@@ -11,7 +11,6 @@ if (isset($_GET["id"])) {
 }
 $sql = "SELECT * FROM locations $id";
 
-
 $result = mysqli_query($conn, $sql);
 
 // put all results in the rows array

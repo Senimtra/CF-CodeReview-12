@@ -13,6 +13,8 @@
     };
     funnyTask();
 
+    // ### Second function due to second level navbar and relative paths ###
+
     function funnyTask2() {
         var serriJokes = new XMLHttpRequest();
         serriJokes.onreadystatechange = function() {
