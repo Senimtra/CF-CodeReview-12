@@ -4,7 +4,9 @@ body {
 }
 
 .btn-group a,
-.btn-group a:hover {
+.btn-group a:hover,
+#socialMedia a,
+#socialMedia a:hover {
   color: white;
   text-decoration: none;
 }
