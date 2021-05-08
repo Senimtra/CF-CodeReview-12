@@ -2,17 +2,23 @@
 require_once 'db_connect.php';
 
 if ($_POST) {
-    $name = $_POST['name'];
+    $loc_name = $_POST['loc_name'];
     $price = $_POST['price'];
+    $descr_short = $_POST['descr_short'];
+    $descr_long = $_POST['descr_long'];
+    $wiki_link = $_POST['wiki_link'];
+    $longitude = $_POST['longitude'];
+    $latitude = $_POST['latitude'];
+    $loc_image = $_POST['loc_image'];
 
-    $sql = "INSERT INTO locations (loc_name, price, loc_) VALUES ('$loc_name', $price, '$->fileName')";
+    $sql = "INSERT INTO locations (loc_name, price, descr_short, descr_long, wiki_link, longitude, latitude, loc_image) VALUES ('$loc_name', '$price', '$descr_short', '$descr_long', '$wiki_link', '$longitude', '$latitude', '$loc_image')";
 
     if ($connect->query($sql) === true) {
         $class = "success";
         $message = "The entry below was successfully created <br>
             <table class='table w-50'><tr>
-            <td> $name </td>
-            <td> $price </td>
+            <td>$loc_name</td>
+            <td>$price</td>
             </tr></table><hr>";
     } else {
         $class = "danger";
